@@ -29,6 +29,10 @@ h2 {
     font-size: 3em;
     /* margin-bottom: 4px; */
 }
+h3{
+    font-family: cursive;
+    color: white;
+}
 marquee {
     font-size: 1.5em;
     color: #FFD700; /* Yellow color for the running text */
@@ -42,23 +46,50 @@ marquee {
 }
 
 .button {
-    display: block;
+    /* display: block;
     width: 80%;
     max-width: 300px;
     margin: 10px 0;
     padding: 15px;
-    background-color: #54bedc;
+    background: linear-gradient(90deg, #cd04e4, #0133ff);
     color: white;
     text-decoration: none;
     border-radius: 10px;
     font-size: 1.2em;
     transition: background-color 0.3s ease-in-out;
     border: 3px solid rgb(255, 247, 0);
+    cursor: pointer; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px 0;
+    padding: 15px;
+    background: linear-gradient(90deg, #cd04e4, #0133ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border: 3px solid rgb(255, 247, 0);
     cursor: pointer;
+}
 
+.button i {
+    margin-right: 10px;
 }
 
 .button:hover {
-    background-color: #00ff26;
-    transform: scale(1.1);
+    background: linear-gradient(90deg, rgba(12,236,240,1) 0%, rgba(97,184,74,1) 100%);
+    transform: scale(1.08);
 }
+
+/* .button:hover {
+    background: linear-gradient(90deg, #7928CA, #FF0080);
+    transform: scale(1.05);
+} */
+#typing-animation {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+  }
