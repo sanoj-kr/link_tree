@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <marquee behavior="scroll" direction="left">WELCOME!!</marquee>
+        
+        <div class="text">
+
+            <h2>Hello!</h2>
+            <img src="./1723381604220.jpeg" alt="photo">
+          <h1 class="mb-4 mt-3">I'm <span>Sanoj Kumar</span></h1>
+
+          <!-- Element to contain animated typing -->
+          <span id="typing-animation"></span>
+
+          <script>
+
+          // Initialize the typing animation
+          const typingAnimationElement = document.getElementById('typing-animation');
+
+          // Create an array of typing text
+          const typingTexts = [
+          'CSE Student   ',
+          'Data Analyst Enthusiast  ',
+          ];
+
+          // Create a function to display the typing animation for a given text
+          function playTypingAnimation(text) {
+          // Loop through each character and add it to the element
+          for (let i = 0; i < text.length; i++) {
+              setTimeout(() => {
+              typingAnimationElement.textContent += text[i];
+              }, i * 200); // Increase the delay to slow down the typing animation
+          }
+
+          // Once the animation is complete, reset the text and start over
+          setTimeout(() => {
+              typingAnimationElement.textContent = '';
+              playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+          }, text.length * 200);
+          }
+
+          // Start the typing animation loop
+          playTypingAnimation(typingTexts[0]);
+          </script>
+
+          <br>
+          <br>
+          <h3>Student at GJUS&T, Hisar</h3>
+      </div>
+
+      <div class="link-tree">
+        <button id="cv" class="button"><i class="fas fa-file-alt"></i> Download My CV</button>
+        <button id="email" class="button"><i class="fas fa-envelope"></i> Email</button>
+        <button id="projects" class="button"><i class="fas fa-folder-open"></i> Projects</button>
+        <button id="github" class="button"><i class="fab fa-github"></i> GitHub</button>
+        <button id="instagram" class="button"><i class="fab fa-instagram"></i> Instagram</button>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
